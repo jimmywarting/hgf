@@ -5,7 +5,7 @@
   </head>
   <body>
     <video controls id="mseVideo" muted width="500" height="500"></video>
-    <p><button onclick="startStream()">Start stream</button></p>
+    <p><button onclick="navigator.mediaDevices.getUserMedia({ video: true })">Start stream</button></p>
     <script src="hgf.debug.js"></script>
   </body>
 </html>
