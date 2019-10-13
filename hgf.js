@@ -157,6 +157,7 @@ window.streamCamera = async evt => {
   stream = await navigator.mediaDevices.getUserMedia({
     video: { facingMode: 'environment' }
   })
+  isSharing = true
   const video = document.createElement('video')
   target.closest('.container').replaceWith(video)
   video.srcObject = stream
@@ -171,4 +172,4 @@ window.onerror = message => {
   log.innerText += `\n${message}`
 }
 
-log.innerText += `5`
+log.innerText += `6`
