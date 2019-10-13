@@ -120,9 +120,7 @@ function shareSnapshot() {
   log.innerText += '\nsharing screenshot'
   let mySnapshot = ''
 
-  let myStream =
-    document
-    .querySelector('video, canvas')
+  let myStream = document.querySelector('video, canvas')
 
   if (myStream.matches('video')) {
     const canvas = document.createElement('canvas')
@@ -130,6 +128,8 @@ function shareSnapshot() {
     canvas.height = myStream.height
     canvas.width = myStream.width
     ctx.drawImage(myStream, 0, 0, canvas.width, canvas.height)
+    canvas.style.border = '1px solid #000'
+    document.body.appendChild(canvas)
     myStream = canvas
   }
 
@@ -172,4 +172,4 @@ window.onerror = message => {
   log.innerText += `\n${message}`
 }
 
-log.innerText += `7`
+log.innerText += `8`
