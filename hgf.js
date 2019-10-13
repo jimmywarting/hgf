@@ -117,6 +117,7 @@ async function main (initiator) {
 main()
 
 function shareSnapshot() {
+  log.innerText += '\nsharing screenshot'
   let mySnapshot = ''
 
   let myStream =
@@ -169,3 +170,5 @@ window.streamCamera = async evt => {
 window.onerror = message => {
   log.innerText += `\n${message}`
 }
+
+log.innerText += `5`
