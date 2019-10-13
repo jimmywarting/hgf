@@ -129,7 +129,7 @@ function shareSnapshot() {
     const ctx = canvas.getContext('2d')
     canvas.height = myStream.height
     canvas.width = myStream.width
-    ctx.drawImage(myStream, 0, 0)
+    ctx.drawImage(myStream, 0, 0, canvas.width, canvas.height)
     myStream = canvas
   }
 
@@ -172,4 +172,4 @@ window.onerror = message => {
   log.innerText += `\n${message}`
 }
 
-log.innerText += `6`
+log.innerText += `7`
