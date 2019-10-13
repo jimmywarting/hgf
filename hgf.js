@@ -128,7 +128,7 @@ function shareSnapshot() {
     const ctx = canvas.getContext('2d')
     canvas.height = myStream.height
     canvas.width = myStream.width
-    canvas.drawImage(myStream, 0, 0)
+    ctx.drawImage(myStream, 0, 0)
     myStream = canvas
   }
 
