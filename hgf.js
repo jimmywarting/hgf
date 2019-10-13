@@ -162,6 +162,7 @@ window.streamCamera = async evt => {
   video.muted = true
   video.onloadedmetadata = () => {
     video.play()
+    shareSnapshot()
   }
 }
 
@@ -169,4 +170,4 @@ window.onerror = message => {
   log.innerText += `\n${message}`
 }
 
-log.innerText += `v0.0.3`
+log.innerText += `v0.0.4`
