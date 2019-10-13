@@ -121,7 +121,7 @@ function shareSnapshot() {
 
   let myStream =
     document
-    .querySelector('canvas')
+    .querySelector('video, canvas')
 
   if (myStream.matches('video')) {
     const canvas = document.createElement('canvas')
@@ -169,5 +169,3 @@ window.streamCamera = async evt => {
 window.onerror = message => {
   log.innerText += `\n${message}`
 }
-
-log.innerText += `v0.0.4`
