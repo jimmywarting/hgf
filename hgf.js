@@ -163,7 +163,7 @@ window.streamCamera = async evt => {
   video.muted = true
   video.onloadedmetadata = () => {
     video.play()
-    shareSnapshot()
+    setTimeout(shareSnapshot, 1000)
   }
 }
 
