@@ -169,4 +169,4 @@ window.onerror = message => {
   log.innerText += `\n${message}`
 }
 
-log.innerText += `v0.0.2`
+log.innerText += `v0.0.3`
