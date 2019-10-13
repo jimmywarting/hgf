@@ -125,8 +125,8 @@ function shareSnapshot() {
   if (myStream.matches('video')) {
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
-    canvas.height = myStream.height
-    canvas.width = myStream.width
+    canvas.height = myStream.naturalHeight
+    canvas.width = myStream.naturalWidth
     ctx.drawImage(myStream, 0, 0, canvas.width, canvas.height)
     canvas.style.border = '1px solid #000'
     document.body.appendChild(canvas)
