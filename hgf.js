@@ -117,10 +117,22 @@ async function main (initiator) {
 main()
 
 function shareSnapshot() {
-  const mySnapshot =
+  let mySnapshot = ''
+
+  let myStream =
     document
     .querySelector('canvas')
-    .toDataURL('image/webp')
+
+  if (myStream.matches('video')) {
+    const canvas = document.createElement('canvas')
+    const ctx = canvas.getContext('2d')
+    canvas.height = myStream.height
+    canvas.width = myStream.width
+    canvas.drawImage(myStream, 0, 0)
+    myStream = canvas
+  }
+
+  mySnapshot = myStream.toDataURL('image/webp')
 
   for (const peer of Object.values(connectedPeers)) {
     peer.send(json2uint({
