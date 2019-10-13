@@ -127,6 +127,7 @@ function shareSnapshot() {
     const ctx = canvas.getContext('2d')
     canvas.height = myStream.naturalHeight
     canvas.width = myStream.naturalWidth
+    log.innerText += `\n${myStream.naturalHeight}x${myStream.naturalWidth}`
     ctx.drawImage(myStream, 0, 0, canvas.width, canvas.height)
     canvas.style.border = '1px solid #000'
     document.body.appendChild(canvas)
@@ -172,4 +173,4 @@ window.onerror = message => {
   log.innerText += `\n${message}`
 }
 
-log.innerText += `8`
+log.innerText += `9`
