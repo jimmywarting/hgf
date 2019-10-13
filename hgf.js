@@ -130,7 +130,6 @@ function shareSnapshot() {
     log.innerText += `\n${myStream.videoWidth}x${myStream.videoHeight}`
     ctx.drawImage(myStream, 0, 0, canvas.width, canvas.height)
     canvas.style.border = '1px solid #000'
-    document.body.appendChild(canvas)
     myStream = canvas
   }
 
@@ -173,4 +172,4 @@ window.onerror = message => {
   log.innerText += `\n${message}`
 }
 
-log.innerText += `2`
+log.innerText += `3`
