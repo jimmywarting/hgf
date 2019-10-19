@@ -19,7 +19,7 @@ async function main (initiator) {
   var peerId = new Uint8Array([45, 87, 87, 48, 48, 51, 45].concat([...Array(13)].map(_ => Math.random() * 16 | 0)))
   var ip = await fetch('https://api.db-ip.com/v2/free/self/ipAddress').then(r => r.text())
   var infoHash = await common.sha1(common.text2arr('HGF:app:' + ip))
-  var announce = [ 'wss://tracker.openwebtorrent.com' ]
+  var announce = [ 'wss://mehtr.herokuapp.com' ]
 
   var tracker = new Tracker({
     infoHash,
