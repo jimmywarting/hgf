@@ -66,7 +66,7 @@ async function main (initiator) {
       const { receiver, streams } = evt
       video.srcObject = streams[0]
       video.play()
-      delay.onchange = () => receiver.jitterBufferDelayHint = delay.valueAsNumber
+      delay.onchange = () => receiver.playoutDelayHint = delay.valueAsNumber
     }
 
     peer.onMessage = async uint => {
