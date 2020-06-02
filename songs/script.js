@@ -17,7 +17,7 @@ jQuery(function ($) {
     // initialize playlist and controls
     var index = 0,
     playing = false,
-    mediaPath = '/songs/',
+    mediaPath = './',
     extension = '.mp3',
     tracks = [{
         "name": "name",
