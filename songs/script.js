@@ -35,6 +35,10 @@ jQuery(function ($) {
         "name": "name",
         "duration": "2:46",
         "file": "4"
+    },{
+        "name": "name",
+        "duration": "1:33",
+        "file": "5"
     }],
     x = tracks.forEach((value, i) => {
         var trackName = value.name,
